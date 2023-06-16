@@ -152,7 +152,7 @@ header ul {
   justify-content: space-evenly;
   max-width: 75%;
   margin-inline: auto;
-  font-size: calc(var(--fs-400) * 0.7);
+  font-size: calc(var(--fs-400) * 0.8);
 }
 
 header li {
