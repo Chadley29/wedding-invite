@@ -221,7 +221,6 @@ h2 {
 .floral-decoration {
   position: absolute;
   z-index: 1000;
-  position: fixed;
 }
 
 .floral-decoration__container {
@@ -240,6 +239,7 @@ h2 {
 .top-right {
   top: 0;
   height: 15rem;
+  position: fixed;
 }
 
 .bottom-center {
