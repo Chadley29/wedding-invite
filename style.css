@@ -212,7 +212,9 @@ h2 {
   border-radius: 50%;
   color: var(--clr-text-light);
   background-color: var(--clr-main);
+}
 
+.hide {
   display: none;
 }
 
@@ -292,6 +294,17 @@ h2 {
 
 .invite {
   text-align: center;
+  margin-top: 2rem;
+  place-items: center;
+}
+
+.invite p {
+  max-width: 32ch;
+  margin-inline: auto;
+}
+
+.invite .names {
+  margin: 0;
 }
 
 .date-time-wrapper {
@@ -300,19 +313,23 @@ h2 {
   align-items: center;
 }
 
+.date-time-wrapper:not(.date-number) {
+  font-family: var(--ff-accent);
+}
+
 .day,
 .time {
-  font-size: 1.25rem;
+  font-size: var(--fs-300);
   color: var(--clr-text-main);
   text-transform: uppercase;
-  border-block: 1px solid var(--clr-text-main);
-  padding-block: 0.5em;
+  border-block: 2px solid var(--clr-text-main);
+  padding: 0.5em;
 }
 
 .date {
-  font-size: 1.4rem;
+  font-size: var(--fs-500);
   color: var(--clr-text-main);
-  border-inline: 1px solid var(--clr-text-main);
+  border-inline: 2px solid var(--clr-text-main);
 }
 
 .date::before {
@@ -326,8 +343,13 @@ h2 {
 .date::before,
 .date::after {
   display: block;
-  font-size: 1rem;
+  font-size: var(--fs-400);
   text-transform: uppercase;
+}
+
+.date-number {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-600);
 }
 
 /* agenda  */
