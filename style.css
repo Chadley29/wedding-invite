@@ -177,7 +177,6 @@ section {
 
 .section-title {
   color: var(--clr-text-dark);
-  text-align: center;
 }
 
 .section-title__inverted {
@@ -202,16 +201,18 @@ h2 {
 }
 
 .home-icon {
-  position: absolute;
-  top: 6rem;
+  position: fixed;
+  top: 1rem;
   right: 0;
   display: grid;
   place-items: center;
   width: 2.5rem;
   aspect-ratio: 1 / 1;
+  margin: 1em;
   border-radius: 50%;
   color: var(--clr-text-light);
   background-color: var(--clr-main);
+  z-index: 999;
 }
 
 .hide {
@@ -256,11 +257,14 @@ h2 {
   width: 100%;
 }
 
-/* landing page  */
-
-:root {
-  --floral-decoration__height: 15rem;
+.top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-block: 3rem;
 }
+
+/* landing page  */
 
 .landing-page {
   text-align: center;
@@ -300,10 +304,6 @@ h2 {
 }
 
 /* invite */
-
-:root {
-  --floral-decoration__height: 12rem;
-}
 
 .invite {
   text-align: center;
@@ -392,20 +392,36 @@ h2 {
   text-align: center;
 }
 
+.agenda h1 {
+  padding: 1em 1em 0.5em 1em;
+  margin-top: 6rem;
+}
+
 .agenda-wrapper {
   display: grid;
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(15, 1fr);
   gap: 1rem;
+  margin-bottom: 4rem;
 }
 
 .agenda-item {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2em;
+  font-size: var(--fs-300);
+}
+
+.agenda-item__icon {
+  text-align: right;
+}
+
+.agenda-item__detail {
+  text-align: left;
 }
 
 .fa-ring::before {
   font-size: 1.75rem;
-  text-align: center;
 }
 
 /* rsvp */
