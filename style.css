@@ -230,18 +230,23 @@ h2 {
 }
 
 .top-left {
+  top: 0;
   left: 0;
 }
 
 .top-right {
+  top: 0;
   right: 0;
 }
 
-.top-left,
-.top-right {
-  top: 0;
-  height: 15rem;
+.fixed-height {
+  height: var(--floral-decoration__height);
   position: fixed;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
 }
 
 .bottom-center {
@@ -252,6 +257,10 @@ h2 {
 }
 
 /* landing page  */
+
+:root {
+  --floral-decoration__height: 15rem;
+}
 
 .landing-page {
   text-align: center;
@@ -292,6 +301,10 @@ h2 {
 
 /* invite */
 
+:root {
+  --floral-decoration__height: 12rem;
+}
+
 .invite {
   text-align: center;
   margin-top: 2rem;
@@ -324,26 +337,47 @@ h2 {
   text-transform: uppercase;
   border-block: 2px solid var(--clr-text-main);
   padding: 0.5em;
+  position: relative;
+}
+
+.day::after,
+.time::before {
+  content: "";
+  position: absolute;
+  /* border-right: 2px solid var(--clr-text-main); */
+  height: 60%;
+  width: 2px;
+  background-color: var(--clr-text-main);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.day::after {
+  right: 0;
+}
+
+.time::before {
+  left: 0;
 }
 
 .date {
-  font-size: var(--fs-500);
   color: var(--clr-text-main);
-  border-inline: 2px solid var(--clr-text-main);
+  line-height: 1.2;
 }
 
 .date::before {
   content: "april";
+  font-size: var(--fs-300);
 }
 
 .date::after {
   content: "2024";
+  font-size: calc(var(--fs-400) * 0.75);
 }
 
 .date::before,
 .date::after {
   display: block;
-  font-size: var(--fs-400);
   text-transform: uppercase;
 }
 
