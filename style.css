@@ -15,7 +15,9 @@
 
 :root {
   --clr-main: #899378;
-  --clr-accent: #ced0ca;
+  --clr-accent-light: #ced0ca;
+  --clr-accent-med: #9ba294;
+  --clr-accent-dark: #707a69;
   --clr-bg: #fff;
   --clr-text-light: #fff;
   --clr-text-dark: #39393a;
@@ -172,7 +174,7 @@ section {
   min-height: 100dvh;
   width: min(100% - 2rem, 50rem);
   margin-inline: auto;
-  scroll-margin-top: 1.5em;
+  /* scroll-margin-top: 1.5em; */
 }
 
 .section-title {
@@ -198,6 +200,7 @@ h2 {
   font-family: var(--ff-heading);
   text-align: center;
   text-wrap: balance;
+  font-weight: 500;
 }
 
 .home-icon {
@@ -215,8 +218,32 @@ h2 {
   z-index: 999;
 }
 
+.home-icon--inverted {
+  color: var(--clr-main);
+  background-color: var(--clr-bg);
+}
+
 .hide {
   display: none;
+}
+
+button {
+  margin: 1em;
+  padding: 0.25em 2em;
+  outline: 0;
+  border: 0;
+  background: var(--clr-accent-dark);
+  background: linear-gradient(
+        90deg,
+        var(--clr-accent-dark) 0%,
+        var(--clr-accent-med) 50%
+      )
+      padding-box,
+    linear-gradient(to right, var(--clr-accent-med), var(--clr-accent-dark))
+      border-box;
+  border-radius: 50em;
+  border: 5px solid transparent;
+  color: var(--clr-text-light);
 }
 
 /* decorations */
@@ -430,6 +457,49 @@ h2 {
   text-align: center;
   background-color: var(--clr-main);
   color: var(--clr-text-light);
+  place-items: center;
+  width: 100%;
+}
+
+.rsvp-wrapper {
+  display: grid;
+  gap: 1em;
+  max-width: min(100% - 4rem, 40ch);
+}
+
+.rsvp .date-time-wrapper > * {
+  color: var(--clr-text-light);
+  margin-bottom: 1rem;
+}
+
+.rsvp .day,
+.rsvp .time {
+  font-size: var(--fs-300);
+  border-block: 2px solid var(--clr-text-light);
+}
+
+.rsvp .day::after,
+.rsvp .time::before {
+  background-color: var(--clr-text-light);
+}
+
+.rsvp .date::before {
+  content: "";
+}
+
+.rsvp .date::after {
+  content: "2023";
+}
+
+.rsvp__submit {
+  background-color: var(--clr-accent-light);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.rsvp__submit p {
+  color: var(--clr-text-main);
+  font-weight: bold;
 }
 
 /* registry */
