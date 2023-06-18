@@ -244,6 +244,19 @@ button {
   border-radius: 50em;
   border: 5px solid transparent;
   color: var(--clr-text-light);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--clr-accent-med);
+  background: linear-gradient(
+        90deg,
+        var(--clr-accent-med) 0%,
+        var(--clr-accent-dark) 50%
+      )
+      padding-box,
+    linear-gradient(to right, var(--clr-accent-dark), var(--clr-accent-med))
+      border-box;
 }
 
 /* decorations */
@@ -289,6 +302,12 @@ button {
   left: 50%;
   transform: translateX(-50%);
   margin-block: 3rem;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 /* landing page  */
@@ -492,6 +511,7 @@ button {
 }
 
 .rsvp__submit {
+  position: relative;
   background-color: var(--clr-accent-light);
   border-radius: 5px;
   padding: 1em;
@@ -506,6 +526,26 @@ button {
 
 .registry {
   text-align: center;
-  background-color: var(--clr-main);
-  color: var(--clr-text-light);
+  place-items: center;
+  width: 100%;
+}
+
+.registry-wrapper {
+  display: grid;
+  gap: 1em;
+  max-width: min(100% - 4rem, 40ch);
+}
+
+.registry__options {
+  background-color: var(--clr-accent-light);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.registry__options p {
+  font-size: var(--fs-300);
+}
+
+.registry-wrapper p:first-of-type {
+  margin-bottom: 1em;
 }

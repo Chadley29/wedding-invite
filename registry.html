@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tayla & Chadley | Wedding invite | Registry</title>
+    <title>Tayla & Chadley | Wedding invite | RSVP</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -13,6 +13,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./tingle/tingle.min.css" />
+    <script src="./tingle/tingle.min.js"></script>
   </head>
   <body>
     <header class="hide">
@@ -27,24 +29,61 @@
       </nav>
     </header>
     <main>
+      <a href="./index.html"
+        ><div class="home-icon">
+          <i class="fa-solid fa-house"></i>
+        </div>
+      </a>
+      <img
+        src="./assets/registry/registry_floral-top-left.png"
+        alt=""
+        class="floral-decoration top-left fixed-height"
+      />
+      <img
+        src="./assets/registry/registry_floral-bottom-right.png"
+        alt=""
+        class="floral-decoration bottom-right fixed-height"
+      />
+
       <!-- registry -->
       <section class="registry" id="registry">
-        <a href="#home"
-          ><div class="home-icon"><i class="fa-solid fa-house"></i></div>
-        </a>
-        <div class="section-title section-title__inverted">Don't forget</div>
-        <p>We look forward to sharing our day with you</p>
-        <p>Please RSVP by:</p>
-        <div class="date-time-wrapper">
-          <div class="day">Tuesday</div>
-          <div class="date">31</div>
-          <div class="time">October</div>
-        </div>
-        <div class="registry__submit">
-          <p>Please click on the link below to RSVP</p>
-          <button>Click here</button>
+        <div class="registry-wrapper">
+          <h1 class="section-title">Registry</h1>
+          <p>
+            Celebrating with you on our special day is a gift in itself.
+            However, for those of you who would like to bless us with a gift, a
+            contribution towards our wishing well would be warmly appreciated.
+          </p>
+          <div class="registry__options">
+            <p>
+              <b>Option 1:</b> A wishing well will be present at our reception
+            </p>
+            <p><b>Option 2:</b> EFT to account provided below</p>
+            <button class="js-tingle-modal">Click here</button>
+          </div>
         </div>
       </section>
+      <div class="tingle-modal class1 class2" style="display: none">
+        <button type="button" class="tingle-modal__close">
+          <span class="tingle-modal__closeIcon"
+            ><svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M.3 9.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3L5 6.4l3.3 3.3c.2.2.5.3.7.3.2 0 .5-.1.7-.3.4-.4.4-1 0-1.4L6.4 5l3.3-3.3c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0L5 3.6 1.7.3C1.3-.1.7-.1.3.3c-.4.4-.4 1 0 1.4L3.6 5 .3 8.3c-.4.4-.4 1 0 1.4z"
+                fill="#000"
+                fill-rule="nonzero"
+              ></path></svg></span
+          ><span class="tingle-modal__closeLabel">Close</span>
+        </button>
+        <div class="tingle-modal-box">
+          <div class="tingle-modal-box__content">
+            <h1>A small content</h1>
+            <p>
+              Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus,
+              porta ac consectetur ac, vestibulum at eros.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
