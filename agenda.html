@@ -13,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header class="hide">
@@ -27,8 +28,65 @@
       </nav>
     </header>
     <main>
-      <a href="./index.html"
-        ><div class="home-icon"><i class="fa-solid fa-house"></i></div>
+      <a href="./index.html">
+        <div class="mobile-menu">
+          <div class="primary-header">
+            <ul class="primary-header__nav" id="primary-header__nav">
+              <li class="primary-header__nav-item">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./invite.html">Invite</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./agenda.html">Agenda</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./rsvp.html">RSVP</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./registry.html">Registry</a>
+              </li>
+            </ul>
+            <button
+              class="hamburger-button"
+              aria-controls="primary-header__nav"
+              aria-expanded="false"
+            >
+              <svg
+                fill="var(--button-color)"
+                class="hamburger"
+                viewBox="0 0 100 100"
+                width="50"
+              >
+                <rect
+                  class="line top"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="25"
+                  rx="5"
+                ></rect>
+                <rect
+                  class="line middle"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="45"
+                  rx="5"
+                ></rect>
+                <rect
+                  class="line bottom"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="65"
+                  rx="5"
+                ></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
       </a>
       <img
         src="./assets/agenda/agenda_floral-top-center.png"
@@ -42,7 +100,7 @@
         <div class="agenda-wrapper">
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-prep-starts.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Prep starts</p>
@@ -51,7 +109,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-guest-arrive.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Guests arrive</p>
@@ -60,7 +118,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-ceremony.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Ceremony</p>
@@ -69,7 +127,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-pre-drinks.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Pre-drinks</p>
@@ -78,7 +136,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-photos.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Photos</p>
@@ -87,7 +145,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-reception.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Reception</p>
@@ -96,7 +154,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-mc-welcome.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>MC welcome</p>
@@ -105,7 +163,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-couple-entrance.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Couple entrance</p>
@@ -114,7 +172,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-speeches-and-toast.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Speeches & toast</p>
@@ -123,7 +181,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-dinner.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Dinner</p>
@@ -132,7 +190,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-dj-starts.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>DJ starts</p>
@@ -141,7 +199,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-cutting-of-cake.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Cutting of cake</p>
@@ -150,7 +208,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-first-dance.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>First dance</p>
@@ -159,7 +217,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-dessert.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Dessert</p>
@@ -168,7 +226,7 @@
           </div>
           <div class="agenda-item">
             <div class="agenda-item__icon">
-              <i class="fa-solid fa-ring"></i>
+              <img src="./assets/agenda/agenda-grand-exit.svg" alt="" />
             </div>
             <div class="agenda-item__detail">
               <p>Grand exit</p>
