@@ -298,6 +298,13 @@ button:not(.hamburger-button):hover {
 }
 
 .bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.bottom-center--image {
   bottom: -15%;
   left: 50%;
   transform: translateX(-50%);
@@ -319,6 +326,12 @@ button:not(.hamburger-button):hover {
 
 .z-1000 {
   z-index: 1000;
+}
+
+.disable-vertical-scroll {
+  overflow-y: hidden;
+  max-height: 100vh;
+  max-height: 100dvh;
 }
 
 /* landing page  */
@@ -365,7 +378,6 @@ button:not(.hamburger-button):hover {
 
 .invite {
   text-align: center;
-  margin-top: 5rem;
   place-items: center;
 }
 
