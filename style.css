@@ -33,6 +33,9 @@
   --fs-600: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
   --fs-700: clamp(2.33rem, calc(1.41rem + 4.63vw), 5rem);
   --fs-800: clamp(2.8rem, calc(1.32rem + 7.42vw), 7.07rem);
+
+  --br-lines: 5px;
+  --br-pill: 999rem;
 }
 
 /* RESET */
@@ -141,7 +144,7 @@ header {
   max-height: max-content;
   color: var(--clr-text-light);
   background: var(--clr-main);
-  padding: 1em;
+  padding: 0.75em;
   z-index: 999;
 }
 
@@ -151,29 +154,32 @@ header ul {
   list-style: none;
 
   display: flex;
-  justify-content: space-evenly;
-  gap: 0.75em;
-  max-width: 75%;
+  justify-content: center;
+  max-width: 100%;
   margin-inline: auto;
-  font-size: calc(var(--fs-400) * 0.8);
+  font-size: calc(var(--fs-400) * 0.9);
+  text-align: center;
 }
 
 header li {
   position: relative;
+  /* border-right: 2px solid white; */
+  padding-inline: 0.5em;
 }
 
 header li::after {
   content: "";
   position: absolute;
-  right: -15%;
   top: 50%;
+  right: 0;
   transform: translateY(-50%);
   background: var(--clr-text-light);
   height: 50%;
   width: 1px;
+  border-radius: var(--br-lines);
 }
 
-header a:last-child li::after {
+header li:last-child:after {
   display: none;
 }
 
@@ -194,7 +200,7 @@ section {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
-  width: min(100% - 2rem, 50rem);
+  width: min(100% - 4rem, 50rem);
   margin-inline: auto;
   /* scroll-margin-top: 1.5em; */
 }
@@ -223,66 +229,6 @@ h2 {
   text-align: center;
   text-wrap: balance;
   font-weight: 500;
-}
-
-.home-icon__container {
-  position: fixed;
-  top: 1rem;
-  right: 0;
-  width: 8rem;
-  margin: 1em;
-  z-index: 999;
-}
-
-.home-icon__main {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  color: var(--clr-text-light);
-  background-color: var(--clr-main);
-  margin-left: auto;
-  z-index: 999;
-}
-
-.home-icon__main--inverted {
-  color: var(--clr-main);
-  background-color: var(--clr-bg);
-}
-
-.home-icon__list-wrapper {
-  position: absolute;
-  top: 50%;
-  left: -8rem;
-  transform: translateY(-50%);
-  width: 16rem;
-  height: max-content;
-  background-color: var(--clr-accent-med);
-  padding: 0.25em;
-  border-radius: 999vw;
-}
-
-.home-icon__list-wrapper ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  display: flex;
-  justify-content: space-evenly;
-  gap: 0.75em;
-  max-width: 75%;
-  margin-right: auto;
-  margin-left: 1em;
-  font-size: calc(var(--fs-300) * 0.75);
-}
-
-.home-icon__list-item {
-  color: var(--clr-text-light);
-  /* background-color: var(--clr-main);
-  border-radius: 999vw; */
-  padding: 0.25em;
 }
 
 .hide {
@@ -380,7 +326,7 @@ button:not(.hamburger-button):hover {
 .landing-page {
   text-align: center;
   place-items: center;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: 0.8fr 2fr 1fr;
   position: relative;
 }
 
@@ -397,12 +343,13 @@ button:not(.hamburger-button):hover {
   overflow: hidden;
   border-radius: 999rem;
   width: min(100% - 2rem, 30rem);
+  height: 27rem;
 }
 
 .img-container img {
   object-fit: cover;
   object-position: center;
-  transform: scale(1.5);
+  transform: scale(1.6);
 }
 
 .landing-page p {
@@ -449,6 +396,7 @@ button:not(.hamburger-button):hover {
   border-block: 2px solid var(--clr-text-main);
   padding: 0.5em;
   position: relative;
+  border-radius: 2px;
 }
 
 .day::after,
@@ -461,6 +409,7 @@ button:not(.hamburger-button):hover {
   background-color: var(--clr-text-main);
   top: 50%;
   transform: translateY(-50%);
+  border-radius: var(--br-lines);
 }
 
 .day::after {
@@ -495,6 +444,10 @@ button:not(.hamburger-button):hover {
 .date-number {
   font-family: var(--ff-heading);
   font-size: var(--fs-600);
+}
+
+.date-number sup {
+  margin-left: 0.2em;
 }
 
 /* agenda  */
@@ -591,8 +544,8 @@ button:not(.hamburger-button):hover {
 
 .rsvp {
   text-align: center;
-  background-color: var(--clr-main);
-  color: var(--clr-text-light);
+  background-color: var(--clr-text-light);
+  color: var(--clr-text-dark);
   place-items: center;
   width: 100%;
   overflow-y: hidden;
@@ -605,19 +558,20 @@ button:not(.hamburger-button):hover {
 }
 
 .rsvp .date-time-wrapper > * {
-  color: var(--clr-text-light);
+  color: var(--clr-text-dark);
   margin-bottom: 1rem;
 }
 
 .rsvp .day,
 .rsvp .time {
   font-size: var(--fs-300);
-  border-block: 2px solid var(--clr-text-light);
+  border-block: 2px solid var(--clr-text-dark);
+  border-radius: 2px;
 }
 
 .rsvp .day::after,
 .rsvp .time::before {
-  background-color: var(--clr-text-light);
+  background-color: var(--clr-text-dark);
 }
 
 .rsvp .date::before {
@@ -688,23 +642,17 @@ button:not(.hamburger-button):hover {
   top: 0;
   right: 0;
   width: max-content;
-  margin: 1em;
-  border-radius: var(--primary-header-br);
+  margin: 1rem;
+  border-radius: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   background-color: var(--clr-main);
   box-shadow: var(--inner-shadow);
   z-index: 999;
   transition: background-color 250ms;
-}
-
-.primary-header__title {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  font-weight: 700;
-  text-align: center;
-  padding: 0 2rem;
+  font-family: var(--ff-accent);
 }
 
 .primary-header .primary-header__nav {
@@ -722,13 +670,12 @@ button:not(.hamburger-button):hover {
     position: fixed;
     top: 0;
     right: 0;
-    width: 75%;
+    width: 50%;
     height: 50vh;
     height: 50dvh;
     font-size: var(--fs-500);
     font-weight: 700;
     text-align: center;
-    padding: 4rem;
     background-color: var(--clr-accent-med);
 
     margin: 0;
@@ -783,17 +730,24 @@ button:not(.hamburger-button):hover {
   display: none;
 } */
 
+.hamburger-button svg {
+  transform: scale(0.75);
+}
+
 @media (max-width: 480px) {
   .hamburger-button {
     display: block;
     background: transparent;
     border: 0;
+    padding: 0;
     border-radius: 1rem;
     --button-color: #ffffff;
     --button-animation-speed: 150ms;
     z-index: 999;
+    width: 3rem;
+    height: 3rem;
 
-    /* transform: scale(0.75); */
+    transform: scale(0.75);
   }
 
   .hamburger-button .line {
