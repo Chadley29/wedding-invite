@@ -15,8 +15,11 @@
     />
     <script src="./script.js" defer></script>
 
-    <link rel="stylesheet" defer href="./tingle/tingle.min.css" />
-    <script src="./tingle/tingle.min.js" defer></script>
+    <style>
+      :root {
+        --floral-decoration__height: 12rem;
+      }
+    </style>
   </head>
   <body class="disable-vertical-scroll">
     <header class="hide">
@@ -106,7 +109,7 @@
       <section class="registry" id="registry">
         <div class="registry-wrapper">
           <h1 class="section-title">Registry</h1>
-          <p>
+          <p class="registry-detail">
             Celebrating with you on our special day is a gift in itself.
             However, for those of you who would like to bless us with a gift, a
             contribution towards our wishing well would be warmly appreciated.
@@ -116,10 +119,43 @@
               <b>Option 1:</b> A wishing well will be present at our reception
             </p>
             <p><b>Option 2:</b> EFT to account provided below</p>
-            <button class="js-tingle-modal">Click here</button>
+            <button data-open-modal class="button--main">Click here</button>
+            <dialog data-modal class="registry__modal">
+              <h3>Account details</h3>
+              <p>Bank name: Standard Bank</p>
+              <p>Account holder: MR Chadley CJ Bissolati</p>
+              <p>Account number: XXXXXXXXXXX</p>
+              <p>Account type: SAVINGS</p>
+              <button data-close-modal>Close</button>
+            </dialog>
           </div>
         </div>
       </section>
     </main>
+    <script>
+      const openButton = document.querySelector("[data-open-modal]");
+      const closeButton = document.querySelector("[data-close-modal]");
+      const modal = document.querySelector("[data-modal]");
+
+      openButton.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        modal.close();
+      });
+
+      modal.addEventListener("click", (e) => {
+        const dialogDimensions = modal.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
+          modal.close();
+        }
+      });
+    </script>
   </body>
 </html>
