@@ -148,8 +148,10 @@ body {
   font-family: var(--ff-base);
   font-size: var(--fs-400);
   line-height: 1.5;
+  color: var(--clr-text-dark);
 }
 
+/* desktop header  */
 header {
   position: fixed;
   inset: 0;
@@ -214,7 +216,7 @@ header li:last-child:after {
   box-shadow: var(--inner-shadow);
   z-index: var(--z-index-hamburger);
   transition: background-color 250ms;
-  font-family: var(--ff-accent);
+  font-family: var(--ff-base);
 }
 
 .primary-header .primary-header__nav {
@@ -236,7 +238,7 @@ header li:last-child:after {
     height: 50vh;
     height: 50dvh;
     font-size: var(--fs-500);
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     background-color: var(--clr-accent-med);
 
@@ -417,6 +419,7 @@ h2 {
   border: 5px solid transparent;
   color: var(--clr-text-light);
   cursor: pointer;
+  font-weight: 700;
 }
 
 .button--main:hover {
@@ -499,9 +502,8 @@ dialog::backdrop {
 }
 
 .disable-vertical-scroll {
-  overflow-y: hidden;
-  max-height: 100vh;
-  max-height: 100dvh;
+  position: fixed;
+  inset: 0;
 }
 
 /* landing page  */
@@ -549,6 +551,11 @@ dialog::backdrop {
 .invite {
   text-align: center;
   place-items: center;
+  align-content: center;
+}
+
+.invite > * {
+  margin-bottom: 1em;
 }
 
 .invite p {
@@ -807,12 +814,13 @@ dialog::backdrop {
 
 .registry__modal {
   padding: 0.75em;
-  background: var(--clr-accent-light);
+  background: var(--clr-text-light);
   border-radius: 0.25rem;
   z-index: var(--z-index-modal);
   border: 0;
   outline: 0;
   box-shadow: var(--light-shadow);
+  color: var(--clr-text-dark);
 }
 
 .registry__modal > * {
@@ -821,4 +829,45 @@ dialog::backdrop {
 
 .registry__modal p {
   font-family: var(--ff-accent);
+}
+
+[data-close-modal] {
+  --button-color: var(--clr-text-dark);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.2em;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+[data-close-modal] .line {
+  transition: y var(--button-animation-speed) ease-in
+      var(--button-animation-speed),
+    rotate var(--button-animation-speed) ease-in,
+    opacity 0ms var(--button-animation-speed);
+  transform-origin: center;
+}
+
+[data-close-modal] .line {
+  transition: y var(--button-animation-speed) ease-in,
+    rotate var(--button-animation-speed) ease-in var(--button-animation-speed),
+    opacity 0ms var(--button-animation-speed);
+}
+
+[data-close-modal] :is(.top, .bottom) {
+  y: 45;
+}
+
+[data-close-modal] .top {
+  rotate: 45deg;
+}
+
+[data-close-modal] .middle {
+  opacity: 0;
+}
+
+[data-close-modal] .bottom {
+  rotate: -45deg;
 }
