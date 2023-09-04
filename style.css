@@ -1034,7 +1034,6 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
 }
 
 .rsvp__modal .radio-wrapper .radio-container {
@@ -1043,13 +1042,15 @@ fieldset {
 }
 
 .rsvp .no-of-guests-wrapper {
-  display: none;
+  /* display: none; */
+  display: flex;
   gap: 0.5em;
   justify-content: center;
 }
 
 .rsvp .guest-list-wrapper {
-  display: none;
+  /* display: none; */
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
