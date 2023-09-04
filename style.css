@@ -274,7 +274,7 @@ header li:focus-within {
 
 @media screen and (max-width: 1024px) {
   .primary-header .primary-header__nav {
-    /* display: none !important; */
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
