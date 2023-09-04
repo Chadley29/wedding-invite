@@ -994,6 +994,10 @@ dialog::backdrop {
 
 /* rsvp form */
 
+form div {
+  margin-inline: auto;
+}
+
 fieldset {
   border: 0;
   padding: 0;
@@ -1002,7 +1006,7 @@ fieldset {
 }
 
 .rsvp__modal form > * {
-  margin-block: 0.5em;
+  margin-block: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1011,7 +1015,8 @@ fieldset {
   }
 }
 
-.rsvp__modal form input[type="text"] {
+.rsvp__modal form input[type="text"],
+.rsvp__modal form input[type="textarea"] {
   padding: 0.25em 0.5em;
 }
 .rsvp__modal form input[type="radio"] {
@@ -1043,40 +1048,10 @@ fieldset {
   justify-content: center;
 }
 
-.guest-name-wrapper {
-  display: flex;
-}
-
-.guest-name-container {
+.rsvp .guest-list-wrapper {
   display: none;
-  flex-wrap: nowrap;
-  gap: 0.25em;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-}
-
-.guest-name-container input {
-  width: clamp(20ch, 75%, 30ch);
-}
-
-.add-remove-container {
-  display: flex;
-  gap: 0.5em;
-}
-
-.add-remove-container i {
-  background-color: var(--clr-accent-dark);
-  font-size: 1.25rem;
-  text-align: center;
-  vertical-align: middle;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.25em;
-  border-radius: 50%;
-}
-
-.add-remove-container i:not([class]) {
-  visibility: hidden;
 }
 
 .rsvp input[type="radio"]:checked + label {

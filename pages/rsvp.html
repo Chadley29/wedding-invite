@@ -136,8 +136,16 @@
                 id="rsvp-form"
                 data-netlify="true"
               >
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+                <div class="">
+                  <label for="name">Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name and surname"
+                    required
+                  />
+                </div>
                 <div class="radio-wrapper">
                   <div class="radio-container">
                     <input
@@ -160,7 +168,7 @@
                   </div>
                 </div>
 
-                <fieldset class="no-of-guests-wrapper">
+                <div class="no-of-guests-wrapper">
                   <label for="no-of-guests">Number of guests:</label
                   ><select name="no-of-guests" id="no-of-guests" required>
                     <option value="">Please select</option>
@@ -171,53 +179,21 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-                </fieldset>
+                </div>
 
-                <fieldset>
-                  <div class="guest-name-wrapper">
-                    <div class="guest-name-container">
-                      <label for="guest-name-1">Guest name:</label>
-                      <input
-                        type="text"
-                        id="guest-name-1"
-                        name="guest-name-1"
-                      />
-                      <div class="add-remove-container">
-                        <i class="fa-solid fa-plus" id="add-guest-2"></i><i></i>
-                      </div>
-                    </div>
-                  </div>
+                <div class="guest-list-wrapper">
+                  <label for="guest-list">Name of guest(s):</label>
+                  <input
+                    type="textarea"
+                    id="guest-list"
+                    name="guest-list"
+                    minlength="1"
+                    rows="4"
+                    cols="50"
+                    placeholder="Seperate guests by a comma"
+                  />
+                </div>
 
-                  <div class="guest-name-wrapper">
-                    <div class="guest-name-container">
-                      <label for="guest-name-2">Guest name:</label>
-                      <input
-                        type="text"
-                        id="guest-name-2"
-                        name="guest-name-2"
-                      />
-                      <div class="add-remove-container">
-                        <i class="fa-solid fa-plus" id="add-guest-3"></i
-                        ><i class="fa-solid fa-minus" id="remove-guest-2"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="guest-name-wrapper">
-                    <div class="guest-name-container">
-                      <label for="guest-name-3">Guest name:</label>
-                      <input
-                        type="text"
-                        id="guest-name-3"
-                        name="guest-name-3"
-                      />
-                      <div class="add-remove-container">
-                        <i class="fa-solid fa-plus" id="add-guest-4"></i
-                        ><i class="fa-solid fa-minus" id="remove-guest-3"></i>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
                 <button type="submit" form="rsvp-form" value="Submit">
                   Submit
                 </button>
@@ -309,35 +285,14 @@
       });
 
       var numberOfGuests = document.getElementById("no-of-guests");
-      var guestName1Container = document.querySelectorAll(
-        ".guest-name-container"
-      )[0];
-      var guestName2Container = document.querySelectorAll(
-        ".guest-name-container"
-      )[1];
-      var guestName3Container = document.querySelectorAll(
-        ".guest-name-container"
-      )[2];
+      var guestList = document.querySelector(".guest-list-wrapper");
 
       numberOfGuests.addEventListener("change", function handleChange(event) {
         if (event.target.value >= "1") {
-          guestName1Container.style.display = "flex";
+          guestList.style.display = "flex";
         } else {
-          guestName1Container.style.display = "none";
+          guestList.style.display = "none";
         }
-      });
-
-      var addGuestTwo = document.getElementById("add-guest-2");
-      var removeGuestTwo = document.getElementById("remove-guest-2");
-      var addGuestThree = document.getElementById("add-guest-3");
-      var removeGuestThree = document.getElementById("remove-guest-3");
-
-      addGuestTwo.addEventListener("click", function () {
-        guestName2Container.style.display = "flex";
-      });
-
-      removeGuestTwo.addEventListener("click", function () {
-        guestName2Container.style.display = "none";
       });
     </script>
   </body>
