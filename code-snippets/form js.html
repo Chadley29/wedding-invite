@@ -1,0 +1,27 @@
+<!-- form JS -->
+<script>
+  var attending = document.querySelector("#attending");
+  var guestNumberContainer = document.querySelector(".no-of-guests-wrapper");
+
+  attending.addEventListener("click", function () {
+    guestNumberContainer.style.display = "flex";
+  });
+
+  var notAttending = document.querySelector("#not-attending");
+  var guestNumberContainer = document.querySelector(".no-of-guests-wrapper");
+
+  notAttending.addEventListener("click", function () {
+    guestNumberContainer.style.display = "none";
+  });
+
+  var numberOfGuests = document.getElementById("no-of-guests");
+  var guestList = document.querySelector(".guest-list-wrapper");
+
+  numberOfGuests.addEventListener("change", function handleChange(event) {
+    if (event.target.value >= "1") {
+      guestList.style.display = "flex";
+    } else {
+      guestList.style.display = "none";
+    }
+  });
+</script>
