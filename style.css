@@ -620,8 +620,12 @@ dialog::backdrop {
   }
 }
 
+.landing-hero .floral-decoration {
+  max-width: 400px;
+}
+
 .landing-page p {
-  margin-top: -4rem;
+  /* margin-top: -4rem; */
 }
 
 .landing-page p span {
