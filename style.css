@@ -185,7 +185,7 @@ header ul {
   text-align: center;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   header ul {
     justify-content: space-evenly;
     max-width: 800px;
@@ -235,7 +235,7 @@ header li:focus-within {
   --_hover-scale: scaleX(0.8);
 }
 
-@media (width < 1024px) {
+@media screen and (max-width: 1024px) {
   .desktop-menu {
     display: none;
   }
@@ -272,7 +272,7 @@ header li:focus-within {
   box-shadow: var(--inner-shadow);
 }
 
-@media (width < 1024px) {
+@media screen and (max-width: 1024px) {
   .primary-header .primary-header__nav {
     display: none;
     position: fixed;
@@ -334,7 +334,7 @@ header li:focus-within {
   color: var(--clr-accent-light);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .mobile-menu {
     display: none;
   }
@@ -342,7 +342,7 @@ header li:focus-within {
 
 /* hamburger button */
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .hamburger-button {
     display: none;
   }
@@ -352,7 +352,7 @@ header li:focus-within {
   transform: scale(0.75);
 }
 
-@media (width < 1024px) {
+@media screen and (max-width: 1024px) {
   .hamburger-button {
     display: block;
     background: transparent;
@@ -399,7 +399,7 @@ header li:focus-within {
   }
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   main,
   section {
     max-width: var(--desktop-width);
@@ -447,13 +447,13 @@ h2 {
   display: none;
 }
 
-@media (width < 1024px) {
+@media screen and (max-width: 1024px) {
   .hide--mobile {
     display: none;
   }
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .hide--desktop {
     display: none;
   }
@@ -547,7 +547,7 @@ dialog::backdrop {
   width: 100%;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .bottom-center--image {
     width: 50%;
   }
@@ -570,7 +570,7 @@ dialog::backdrop {
   z-index: 1000;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .disable-vertical-scroll {
     position: fixed;
     overflow: hidden;
@@ -609,7 +609,7 @@ dialog::backdrop {
   transform: scale(1.1);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .img-container {
     width: min(100% - 2rem, 25rem);
     height: 32rem;
@@ -649,7 +649,7 @@ dialog::backdrop {
   margin-inline: auto;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .invite p {
     max-width: 50ch;
     margin-inline: auto;
@@ -683,7 +683,7 @@ dialog::backdrop {
   border-radius: 2px;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .day,
   .time {
     font-size: var(--fs-400);
@@ -721,7 +721,7 @@ dialog::backdrop {
   font-size: var(--fs-300);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .date::before {
     font-size: calc(var(--fs-300) * 1.25);
   }
@@ -732,7 +732,7 @@ dialog::backdrop {
   font-size: calc(var(--fs-400) * 0.75);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .date::after {
     font-size: calc(var(--fs-300) * 1.25);
   }
@@ -755,7 +755,7 @@ dialog::backdrop {
 
 /* agenda  */
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   #agenda-page .floral-decoration {
     margin-block: 0;
     margin-top: clamp(6rem, 12vh, 15rem);
@@ -772,7 +772,7 @@ dialog::backdrop {
   margin-top: 6rem;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .agenda h1 {
     margin-top: 4rem;
   }
@@ -819,7 +819,7 @@ dialog::backdrop {
   font-size: var(--fs-300);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .agenda-item {
     gap: 4em;
     font-size: var(--fs-400);
@@ -878,7 +878,7 @@ dialog::backdrop {
   z-index: 1;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   #rsvp-page .floral-decoration {
     z-index: var(--z-index-decoration);
   }
@@ -893,7 +893,7 @@ dialog::backdrop {
   overflow-y: hidden;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .rsvp {
     place-items: initial;
     justify-items: center;
@@ -909,7 +909,7 @@ dialog::backdrop {
   align-content: space-evenly;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .rsvp-wrapper {
     margin-bottom: 8rem;
   }
@@ -968,7 +968,7 @@ dialog::backdrop {
   font-size: calc(var(--fs-300) * 1);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .rsvp__modal {
     padding: 1em;
   }
@@ -982,7 +982,7 @@ dialog::backdrop {
   text-align: center;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .rsvp__modal h3 {
     font-size: calc(var(--fs-500) * 1);
   }
@@ -1001,7 +1001,7 @@ fieldset {
   margin-block: 0.5em;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .rsvp__modal form label {
     font-size: calc(var(--fs-400) * 1);
   }
@@ -1117,7 +1117,7 @@ fieldset {
 
 /* registry */
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   #registry-page .floral-decoration {
     z-index: var(--z-index-decoration);
   }
@@ -1130,7 +1130,7 @@ fieldset {
   overflow-y: hidden;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .registry {
     place-items: initial;
     justify-items: center;
@@ -1146,7 +1146,7 @@ fieldset {
   align-content: space-evenly;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .registry-wrapper {
     margin-bottom: 8rem;
   }
@@ -1202,7 +1202,7 @@ fieldset {
   color: var(--clr-text-light);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .registry__modal {
     padding: 1em;
   }
@@ -1212,7 +1212,7 @@ fieldset {
   padding: 0.25em;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .registry__modal > * {
     padding: 0.5em;
   }
@@ -1234,7 +1234,7 @@ fieldset {
   width: 25%;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .registry__modal h3 {
     font-size: calc(var(--fs-500) * 1);
   }
@@ -1245,7 +1245,7 @@ fieldset {
   font-size: calc(var(--fs-300) * 1);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
   .registry__modal p {
     font-size: calc(var(--fs-400) * 1);
   }
