@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tayla & Chadley | Wedding invite | RSVP</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="../script.js" defer></script>
+
+    <style>
+      :root {
+        --floral-decoration__height: 12rem;
+      }
+
+      @media (width > 480px) {
+        :root {
+          --floral-decoration__height: clamp(18rem, 30vw, 28rem);
+        }
+      }
+    </style>
+  </head>
+  <body class="disable-vertical-scroll">
+    <!-- desktop header nav -->
+    <header class="desktop-menu">
+      <nav>
+        <ul>
+          <a href="../index.html"><li>Home</li></a>
+          <a href="./invite.html"><li>Invite</li></a>
+          <a href="./agenda.html"><li>Agenda</li></a>
+          <a href="./rsvp.html"><li>RSVP</li></a>
+          <a href="./registry.html"><li>Registry</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main id="registry-page">
+      <a href="../index.html">
+        <div class="mobile-menu">
+          <div class="primary-header">
+            <ul class="primary-header__nav" id="primary-header__nav">
+              <li class="primary-header__nav-item">
+                <a href="../index.html">Home</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./invite.html">Invite</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./agenda.html">Agenda</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./rsvp.html">RSVP</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./registry.html">Registry</a>
+              </li>
+            </ul>
+            <button
+              class="hamburger-button"
+              aria-controls="primary-header__nav"
+              aria-expanded="false"
+            >
+              <svg
+                fill="var(--button-color)"
+                class="hamburger"
+                viewBox="0 0 100 100"
+                width="50"
+              >
+                <rect
+                  class="line top"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="25"
+                  rx="5"
+                ></rect>
+                <rect
+                  class="line middle"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="45"
+                  rx="5"
+                ></rect>
+                <rect
+                  class="line bottom"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="65"
+                  rx="5"
+                ></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </a>
+      <img
+        src="../assets/registry/registry_floral-top-left.png"
+        alt=""
+        class="floral-decoration top-left fixed-height"
+      />
+      <img
+        src="../assets/registry/registry_floral-bottom-right.png"
+        alt=""
+        class="floral-decoration bottom-right fixed-height z-1000"
+      />
+
+      <!-- registry -->
+      <section class="registry" id="registry">
+        <div class="registry-wrapper">
+          <h1 class="section-title">Registry</h1>
+          <p class="registry-detail">
+            Celebrating with you on our special day is a gift in itself.
+            However, for those of you who would like to bless us with a gift, a
+            contribution towards our wishing well would be warmly appreciated.
+          </p>
+          <div class="registry__options">
+            <p>
+              <b>Option 1:</b> A wishing well will be present at our reception
+            </p>
+            <p><b>Option 2:</b> EFT to account provided below</p>
+            <button data-open-modal class="button--main">Click here</button>
+            <dialog data-modal class="registry__modal">
+              <h3>Account details</h3>
+              <p>Bank name: Standard Bank</p>
+              <p>Account holder: MR Chadley CJ Bissolati</p>
+              <p>Account number: XXXXXXXXXXX</p>
+              <p>Account type: SAVINGS</p>
+              <button data-close-modal>
+                <svg
+                  fill="var(--button-color)"
+                  class="hamburger"
+                  viewBox="0 0 100 100"
+                  width="30"
+                >
+                  <rect
+                    class="line top"
+                    width="80"
+                    height="10"
+                    x="10"
+                    y="25"
+                    rx="5"
+                  ></rect>
+                  <rect
+                    class="line middle"
+                    width="80"
+                    height="10"
+                    x="10"
+                    y="45"
+                    rx="5"
+                  ></rect>
+                  <rect
+                    class="line bottom"
+                    width="80"
+                    height="10"
+                    x="10"
+                    y="65"
+                    rx="5"
+                  ></rect>
+                </svg>
+              </button>
+            </dialog>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const openButton = document.querySelector("[data-open-modal]");
+      const closeButton = document.querySelector("[data-close-modal]");
+      const modal = document.querySelector("[data-modal]");
+
+      openButton.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        modal.close();
+      });
+
+      modal.addEventListener("click", (e) => {
+        const dialogDimensions = modal.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
+          modal.close();
+        }
+      });
+    </script>
+  </body>
+</html>

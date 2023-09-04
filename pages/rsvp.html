@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tayla & Chadley | Wedding invite | RSVP</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="../script.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <style>
+      :root {
+        --floral-decoration__height: 12rem;
+      }
+
+      @media (width > 480px) {
+        :root {
+          --floral-decoration__height: clamp(18rem, 30vw, 28rem);
+        }
+      }
+    </style>
+  </head>
+  <body class="disable-vertical-scroll">
+    <!-- desktop header nav -->
+    <header class="desktop-menu">
+      <nav>
+        <ul>
+          <a href="../index.html"><li>Home</li></a>
+          <a href="./invite.html"><li>Invite</li></a>
+          <a href="./agenda.html"><li>Agenda</li></a>
+          <a href="./rsvp.html"><li>RSVP</li></a>
+          <a href="./registry.html"><li>Registry</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main id="rsvp-page">
+      <a href="../index.html">
+        <div class="mobile-menu">
+          <div class="primary-header">
+            <ul class="primary-header__nav" id="primary-header__nav">
+              <li class="primary-header__nav-item">
+                <a href="../index.html">Home</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./invite.html">Invite</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./agenda.html">Agenda</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./rsvp.html">RSVP</a>
+              </li>
+              <li class="primary-header__nav-item">
+                <a href="./registry.html">Registry</a>
+              </li>
+            </ul>
+            <button
+              class="hamburger-button"
+              aria-controls="primary-header__nav"
+              aria-expanded="false"
+            >
+              <svg
+                fill="var(--button-color)"
+                class="hamburger"
+                viewBox="0 0 100 100"
+                width="50"
+              >
+                <rect
+                  class="line top"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="25"
+                  rx="5"
+                ></rect>
+                <rect
+                  class="line middle"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="45"
+                  rx="5"
+                ></rect>
+                <rect
+                  class="line bottom"
+                  width="80"
+                  height="10"
+                  x="10"
+                  y="65"
+                  rx="5"
+                ></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </a>
+      <img
+        src="../assets/rsvp/rsvp_floral-top-left.png"
+        alt=""
+        class="floral-decoration top-left fixed-height"
+      />
+      <img
+        src="../assets/rsvp/rsvp_floral-bottom-right.png"
+        alt=""
+        class="floral-decoration bottom-right fixed-height"
+      />
+      <!-- rsvp -->
+      <section class="rsvp" id="rsvp">
+        <div class="rsvp-wrapper">
+          <h1 class="section-title">Don't forget</h1>
+          <p>We look forward to sharing our day with you</p>
+          <p>Please RSVP by:</p>
+          <div class="date-time-wrapper">
+            <div class="day">Tuesday</div>
+            <div class="date">
+              <span class="date-number">31<sup>st</sup></span>
+            </div>
+            <div class="time">October</div>
+          </div>
+          <div class="rsvp__submit">
+            <p>Please click on the link below to RSVP:</p>
+            <button data-open-modal class="button--main">Click here</button>
+            <dialog data-modal class="rsvp__modal">
+              <h3>RSVP</h3>
+              <!-- rsvp form -->
+              <form
+                name="rsvp"
+                method="POST"
+                id="rsvp-form"
+                data-netlify="true"
+              >
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+                <div class="radio-wrapper">
+                  <div class="radio-container">
+                    <input
+                      type="radio"
+                      id="attending"
+                      name="attendance"
+                      value="yes"
+                      required
+                    />
+                    <label for="attending"> Attending</label>
+                  </div>
+                  <div class="radio-container">
+                    <input
+                      type="radio"
+                      id="not-attending"
+                      name="attendance"
+                      value="no"
+                    />
+                    <label for="not-attending"> Not attending</label>
+                  </div>
+                </div>
+
+                <fieldset class="no-of-guests-wrapper">
+                  <label for="no-of-guests">Number of guests:</label
+                  ><select name="no-of-guests" id="no-of-guests" required>
+                    <option value="">Please select</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </fieldset>
+
+                <fieldset>
+                  <div class="guest-name-wrapper">
+                    <div class="guest-name-container">
+                      <label for="guest-name-1">Guest name:</label>
+                      <input
+                        type="text"
+                        id="guest-name-1"
+                        name="guest-name-1"
+                      />
+                      <div class="add-remove-container">
+                        <i class="fa-solid fa-plus" id="add-guest-2"></i><i></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="guest-name-wrapper">
+                    <div class="guest-name-container">
+                      <label for="guest-name-2">Guest name:</label>
+                      <input
+                        type="text"
+                        id="guest-name-2"
+                        name="guest-name-2"
+                      />
+                      <div class="add-remove-container">
+                        <i class="fa-solid fa-plus" id="add-guest-3"></i
+                        ><i class="fa-solid fa-minus" id="remove-guest-2"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="guest-name-wrapper">
+                    <div class="guest-name-container">
+                      <label for="guest-name-3">Guest name:</label>
+                      <input
+                        type="text"
+                        id="guest-name-3"
+                        name="guest-name-3"
+                      />
+                      <div class="add-remove-container">
+                        <i class="fa-solid fa-plus" id="add-guest-4"></i
+                        ><i class="fa-solid fa-minus" id="remove-guest-3"></i>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <button type="submit" form="rsvp-form" value="Submit">
+                  Submit
+                </button>
+              </form>
+              <button data-close-modal>
+                <svg
+                  fill="var(--button-color)"
+                  class="hamburger"
+                  viewBox="0 0 100 100"
+                  width="30"
+                >
+                  <rect
+                    class="line top"
+                    width="80"
+                    height="10"
+                    x="10"
+                    y="25"
+                    rx="5"
+                  ></rect>
+                  <rect
+                    class="line middle"
+                    width="80"
+                    height="10"
+                    x="10"
+                    y="45"
+                    rx="5"
+                  ></rect>
+                  <rect
+                    class="line bottom"
+                    width="80"
+                    height="10"
+                    x="10"
+                    y="65"
+                    rx="5"
+                  ></rect>
+                </svg>
+              </button>
+            </dialog>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- modal JS -->
+    <script>
+      const openButton = document.querySelector("[data-open-modal]");
+      const closeButton = document.querySelector("[data-close-modal]");
+      const modal = document.querySelector("[data-modal]");
+
+      openButton.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        modal.close();
+      });
+
+      modal.addEventListener("click", (e) => {
+        const dialogDimensions = modal.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
+          modal.close();
+        }
+      });
+    </script>
+
+    <!-- attendance JS -->
+    <script>
+      var attending = document.querySelector("#attending");
+      var guestNumberContainer = document.querySelector(
+        ".no-of-guests-wrapper"
+      );
+
+      attending.addEventListener("click", function () {
+        guestNumberContainer.style.display = "flex";
+      });
+
+      var notAttending = document.querySelector("#not-attending");
+      var guestNumberContainer = document.querySelector(
+        ".no-of-guests-wrapper"
+      );
+
+      notAttending.addEventListener("click", function () {
+        guestNumberContainer.style.display = "none";
+      });
+
+      var numberOfGuests = document.getElementById("no-of-guests");
+      var guestName1Container = document.querySelectorAll(
+        ".guest-name-container"
+      )[0];
+      var guestName2Container = document.querySelectorAll(
+        ".guest-name-container"
+      )[1];
+      var guestName3Container = document.querySelectorAll(
+        ".guest-name-container"
+      )[2];
+
+      numberOfGuests.addEventListener("change", function handleChange(event) {
+        if (event.target.value >= "1") {
+          guestName1Container.style.display = "flex";
+        } else {
+          guestName1Container.style.display = "none";
+        }
+      });
+
+      var addGuestTwo = document.getElementById("add-guest-2");
+      var removeGuestTwo = document.getElementById("remove-guest-2");
+      var addGuestThree = document.getElementById("add-guest-3");
+      var removeGuestThree = document.getElementById("remove-guest-3");
+
+      addGuestTwo.addEventListener("click", function () {
+        guestName2Container.style.display = "flex";
+      });
+
+      removeGuestTwo.addEventListener("click", function () {
+        guestName2Container.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
