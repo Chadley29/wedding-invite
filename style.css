@@ -155,12 +155,6 @@ body {
 
 /* desktop header  */
 
-@media (width < 480px) {
-  .desktop-menu {
-    display: none;
-  }
-}
-
 header {
   position: sticky;
   inset: 0;
@@ -191,7 +185,7 @@ header ul {
   text-align: center;
 }
 
-@media (width > 480px) {
+@media (width > 1024px) {
   header ul {
     justify-content: space-evenly;
     max-width: 800px;
@@ -241,13 +235,13 @@ header li:focus-within {
   --_hover-scale: scaleX(0.8);
 }
 
-/* mobile header  */
-
-@media (width > 480px) {
-  .mobile-menu {
+@media (width < 1024px) {
+  .desktop-menu {
     display: none;
   }
 }
+
+/* mobile header  */
 
 .primary-header {
   --primary-header-br: var(--br-modal);
@@ -278,7 +272,7 @@ header li:focus-within {
   box-shadow: var(--inner-shadow);
 }
 
-@media (max-width: 480px) {
+@media (width < 1024px) {
   .primary-header .primary-header__nav {
     display: none;
     position: fixed;
@@ -340,9 +334,15 @@ header li:focus-within {
   color: var(--clr-accent-light);
 }
 
+@media (width > 1024px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
 /* hamburger button */
 
-@media (min-width: 1024px) {
+@media (width > 1024px) {
   .hamburger-button {
     display: none;
   }
@@ -352,7 +352,7 @@ header li:focus-within {
   transform: scale(0.75);
 }
 
-@media (max-width: 480px) {
+@media (width < 1024px) {
   .hamburger-button {
     display: block;
     background: transparent;
@@ -399,7 +399,7 @@ header li:focus-within {
   }
 }
 
-@media (width > 480px) {
+@media (width > 1024px) {
   main,
   section {
     max-width: var(--desktop-width);
@@ -447,13 +447,13 @@ h2 {
   display: none;
 }
 
-@media (width < 480px) {
+@media (width < 1024px) {
   .hide--mobile {
     display: none;
   }
 }
 
-@media (width > 480px) {
+@media (width > 1024px) {
   .hide--desktop {
     display: none;
   }
@@ -547,7 +547,7 @@ dialog::backdrop {
   width: 100%;
 }
 
-@media (width > 480px) {
+@media (width > 1024px) {
   .bottom-center--image {
     width: 50%;
   }
@@ -570,7 +570,7 @@ dialog::backdrop {
   z-index: 1000;
 }
 
-@media (width > 480px) {
+@media (width > 1024px) {
   .disable-vertical-scroll {
     position: fixed;
     overflow: hidden;
@@ -609,7 +609,7 @@ dialog::backdrop {
   transform: scale(1.1);
 }
 
-@media (width > 480px) {
+@media (width > 1024px) {
   .img-container {
     width: min(100% - 2rem, 25rem);
     height: 32rem;
@@ -755,7 +755,7 @@ dialog::backdrop {
 
 /* agenda  */
 
-@media (width > 480px) {
+@media (width > 1024px) {
   #agenda-page .floral-decoration {
     margin-block: 0;
     margin-top: clamp(6rem, 12vh, 15rem);
