@@ -184,15 +184,15 @@
 
                 <div class="guest-list-wrapper">
                   <label for="guest-list">Name of guest(s):</label>
-                  <input
-                    type="textarea"
+                  <textarea
                     id="guest-list"
                     name="guest-list"
                     minlength="1"
                     rows="4"
-                    cols="50"
+                    cols="25"
                     placeholder="Seperate guests by a comma"
-                  />
+                    wrap="hard"
+                  ></textarea>
                 </div>
 
                 <button type="submit" form="rsvp-form" value="Submit">

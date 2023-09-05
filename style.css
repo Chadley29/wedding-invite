@@ -319,6 +319,7 @@ header li:focus-within {
   height: 2px;
   background-color: var(--clr-accent-light);
   transition: all 150ms;
+  border-radius: var(--br-lines);
 }
 
 .primary-header .primary-header__nav li a:hover::after {
@@ -1005,12 +1006,22 @@ fieldset {
   min-width: 0;
 }
 
+.rsvp__modal form input,
+.rsvp__modal form select,
+.rsvp__modal form textarea {
+  /* border-color: var(--clr-accent-dark);
+  outline-color: var(--clr-accent-dark); */
+  accent-color: var(--clr-accent-dark);
+}
+
 .rsvp__modal form > * {
-  margin-block: 2em;
+  margin-bottom: 2em;
 }
 
 .rsvp__modal h3 {
   position: relative;
+  margin-bottom: 1.25em;
+  font-size: var(--fs-500);
 }
 
 .rsvp__modal h3::after {
@@ -1022,6 +1033,7 @@ fieldset {
   background-color: var(--clr-text-light);
   height: 2px;
   width: 25%;
+  border-radius: var(--br-lines);
 }
 
 @media screen and (min-width: 1024px) {
@@ -1031,7 +1043,8 @@ fieldset {
 }
 
 .rsvp__modal form input,
-.rsvp__modal form select {
+.rsvp__modal form select,
+.rsvp__modal form textarea {
   padding: 0.25em 0.5em;
 }
 .rsvp__modal form input[type="radio"] {
@@ -1040,7 +1053,8 @@ fieldset {
 }
 
 .rsvp__modal form input,
-.rsvp__modal form select {
+.rsvp__modal form select,
+.rsvp__modal form textarea {
   border-radius: var(--br-modal);
   border-width: 0;
 }
@@ -1102,7 +1116,8 @@ fieldset {
 
 @media screen and (min-width: 1024px) {
   .rsvp__modal label,
-  .rsvp__modal input {
+  .rsvp__modal input,
+  .rsvp__modal form textarea {
     font-size: calc(var(--fs-400) * 1);
   }
 }
@@ -1204,6 +1219,7 @@ fieldset {
   background-color: var(--clr-text-dark);
   height: 2px;
   width: 20%;
+  border-radius: var(--br-lines);
 }
 
 .registry__options {
@@ -1270,6 +1286,7 @@ fieldset {
   background-color: var(--clr-text-light);
   height: 2px;
   width: 25%;
+  border-radius: var(--br-lines);
 }
 
 @media screen and (min-width: 1024px) {
@@ -1328,4 +1345,96 @@ fieldset {
 
 [data-close-modal] .bottom {
   rotate: -45deg;
+}
+
+/* thank you  */
+
+@media screen and (min-width: 1024px) {
+  #thank-you-page .floral-decoration {
+    z-index: var(--z-index-decoration);
+  }
+}
+
+.thank-you {
+  text-align: center;
+  place-items: center;
+  width: 100%;
+  overflow-y: hidden;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .thank-you {
+    place-items: initial;
+    justify-items: center;
+    align-content: space-evenly;
+    grid-template-rows: 1fr;
+  }
+}
+
+.thank-you-wrapper {
+  display: grid;
+  gap: 4em;
+  max-width: min(100% - 4rem, 40ch);
+  align-content: space-evenly;
+}
+
+.thank-you-wrapper h1 {
+  position: relative;
+  margin-bottom: 0.25em;
+}
+
+.thank-you-wrapper h1::after {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-text-dark);
+  height: 2px;
+  width: 20%;
+  border-radius: var(--br-lines);
+}
+
+.thank-you-detail {
+  margin-top: 1em;
+}
+
+#back-link {
+  color: var(--clr-main);
+  font-weight: 700;
+  transition: 150ms ease;
+  font-size: var(--fs-500);
+  position: relative;
+}
+
+#back-link:hover,
+#back-link:focus {
+  color: var(--clr-accent-dark);
+  transform: scale(1.1);
+}
+
+#back-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-accent-dark);
+  height: 2px;
+  width: 0;
+  transition: 250ms ease-in-out;
+  border-radius: var(--br-lines);
+}
+
+#back-link:hover::after,
+#back-link:focus::after {
+  width: 75%;
+}
+
+.thank-you-names {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
 }
