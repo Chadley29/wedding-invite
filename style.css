@@ -350,7 +350,7 @@ header li:focus-within {
 }
 
 .hamburger-button svg {
-  /* transform: scale(0.75); */
+  transform: scale(0.75);
 }
 
 @media screen and (max-width: 1024px) {
