@@ -250,7 +250,7 @@ header li:focus-within {
   right: 0;
   width: max-content;
   margin: 1rem;
-  border-radius: 50%;
+  border-radius: var(--br-modal);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -405,20 +405,22 @@ header li:focus-within {
   }
 
   .hamburger-button span:nth-child(1) {
-    top: 0px;
+    top: 0;
   }
 
   .hamburger-button span:nth-child(2),
   .hamburger-button span:nth-child(3) {
-    top: 18px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .hamburger-button span:nth-child(4) {
-    top: 36px;
+    bottom: 0;
   }
 
   .hamburger-button.open span:nth-child(1) {
-    top: 18px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 0%;
     left: 50%;
   }
@@ -438,7 +440,8 @@ header li:focus-within {
   }
 
   .hamburger-button.open span:nth-child(4) {
-    top: 18px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 0%;
     left: 50%;
   }
