@@ -290,7 +290,7 @@ header li:focus-within {
     padding: 0;
     list-style: none;
 
-    padding: 2em;
+    padding: 2.5em 2em;
     border-radius: calc(var(--primary-header-br) * 1.5) 0
       calc(var(--primary-header-br) * 1.5) calc(var(--primary-header-br) * 1.5);
   }
@@ -355,7 +355,9 @@ header li:focus-within {
 
 @media screen and (max-width: 1024px) {
   .hamburger-button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     border: 0;
     padding: 0;
@@ -363,10 +365,10 @@ header li:focus-within {
     --button-color: #ffffff;
     --button-animation-speed: 150ms;
     z-index: var(--z-index-hamburger);
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
 
-    transform: scale(0.75);
+    /* transform: scale(0.75); */
   }
 
   .hamburger-button .line {
