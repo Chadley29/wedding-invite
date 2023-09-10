@@ -17,3 +17,9 @@ buttons.forEach((button) => {
     }
   });
 });
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("open");
+  });
+});

@@ -368,37 +368,79 @@ header li:focus-within {
     width: 3.5rem;
     height: 3.5rem;
 
-    /* transform: scale(0.75); */
-  }
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
 
-  .hamburger-button .line {
-    transition: y var(--button-animation-speed) ease-in
-        var(--button-animation-speed),
-      rotate var(--button-animation-speed) ease-in,
-      opacity 0ms var(--button-animation-speed);
+    transform: scale(0.6);
     transform-origin: center;
   }
 
-  .hamburger-button[aria-expanded="true"] .line {
-    transition: y var(--button-animation-speed) ease-in,
-      rotate var(--button-animation-speed) ease-in var(--button-animation-speed),
-      opacity 0ms var(--button-animation-speed);
+  /* hamburger icon */
+
+  .hamburger-button span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: var(--button-color);
+    border-radius: var(--br-lines);
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
   }
 
-  .hamburger-button[aria-expanded="true"] :is(.top, .bottom) {
-    y: 45;
+  .hamburger-button span:nth-child(1) {
+    top: 0px;
   }
 
-  .hamburger-button[aria-expanded="true"] .top {
-    rotate: 45deg;
+  .hamburger-button span:nth-child(2),
+  .hamburger-button span:nth-child(3) {
+    top: 18px;
   }
 
-  .hamburger-button[aria-expanded="true"] .middle {
-    opacity: 0;
+  .hamburger-button span:nth-child(4) {
+    top: 36px;
   }
 
-  .hamburger-button[aria-expanded="true"] .bottom {
-    rotate: -45deg;
+  .hamburger-button.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .hamburger-button.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .hamburger-button.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .hamburger-button.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
   }
 }
 
