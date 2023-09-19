@@ -1137,6 +1137,7 @@ dialog::backdrop {
   align-content: center;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
 .agenda-item__detail {
