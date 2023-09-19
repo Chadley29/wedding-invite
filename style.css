@@ -1130,7 +1130,7 @@ dialog::backdrop {
 } */
 
 .agenda-item__icon {
-  width: clamp(2.5rem, 10vw, 5.5rem);
+  width: clamp(3.5rem, 10vw, 4.5rem);
   aspect-ratio: 1;
   margin-left: auto;
   display: flex;
