@@ -486,10 +486,6 @@ header li:focus-within {
 
   /* hamburger icon */
 
-  .hamburger-button svg {
-    transform: scale(0.5);
-  }
-
   .hamburger-button span {
     display: block;
     position: absolute;
@@ -668,6 +664,103 @@ dialog::backdrop {
     transform: translateY(0);
   }
 } */
+
+.close-modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  border-radius: 1rem;
+  --button-color: #ffffff;
+  --button-animation-speed: 150ms;
+  z-index: calc(var(--z-index-modal) + 1);
+  width: 3rem;
+  height: 3rem;
+
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  transform: scale(0.5);
+  transform-origin: center;
+}
+
+.close-modal-btn span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: var(--button-color);
+  border-radius: var(--br-lines);
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.close-modal-btn span:nth-child(1) {
+  top: 0;
+}
+
+.close-modal-btn span:nth-child(2),
+.close-modal-btn span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close-modal-btn span:nth-child(4) {
+  bottom: 0;
+}
+
+.close-modal-btn span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0%;
+  left: 50%;
+}
+
+.close-modal-btn span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close-modal-btn span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.close-modal-btn span:nth-child(4) {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0%;
+  left: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .close-modal-btn {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 
 /* decorations */
 
