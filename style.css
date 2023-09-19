@@ -1138,6 +1138,14 @@ dialog::backdrop {
   justify-content: center;
   align-items: center;
   padding: 0;
+  position: relative;
+}
+
+.agenda-item__icon img {
+  position: relative;
+  inset: 0;
+  width: 100%;
+  height: auto;
 }
 
 .agenda-item__detail {
