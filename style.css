@@ -1355,6 +1355,11 @@ fieldset {
   border-width: 0;
 }
 
+.rsvp__modal form input,
+.rsvp__modal form textarea {
+  text-align: left;
+}
+
 .rsvp__modal .name-wrapper {
   display: flex;
   justify-content: center;
@@ -1391,6 +1396,10 @@ fieldset {
   gap: 0.5em;
   justify-content: center;
   align-items: center;
+}
+
+.rsvp .no-of-guests-wrapper label {
+  text-align: center;
 }
 
 .rsvp .guest-list-wrapper {
