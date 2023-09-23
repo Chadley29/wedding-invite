@@ -272,7 +272,7 @@ header li:focus-within {
   box-shadow: var(--inner-shadow);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .primary-header__nav {
     padding: 1.5em 1em !important;
   }
@@ -874,7 +874,7 @@ dialog::backdrop {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .names {
     margin-top: 0;
   }
@@ -940,7 +940,7 @@ dialog::backdrop {
   align-content: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .invite {
     margin-top: 5rem;
   }
