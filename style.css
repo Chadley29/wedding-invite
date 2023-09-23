@@ -883,7 +883,7 @@ dialog::backdrop {
 
   .img-container {
     width: min(100% - 2rem, 25rem);
-    height: 24rem;
+    /* height: 24rem; */
   }
 
   .landing-page p {
@@ -918,7 +918,7 @@ dialog::backdrop {
 /* tablet fix home page  */
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   .img-container {
-    height: 38rem;
+    /* height: 38rem; */
   }
 
   .landing-page p {
