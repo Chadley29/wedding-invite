@@ -272,6 +272,12 @@ header li:focus-within {
   box-shadow: var(--inner-shadow);
 }
 
+@media screen and (max-width: 375px) {
+  .primary-header__nav {
+    padding: 1.5em 1em !important;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .primary-header .primary-header__nav {
     display: none;
@@ -868,6 +874,25 @@ dialog::backdrop {
   transform: scale(1.1);
 }
 
+@media screen and (max-width: 375px) {
+  .names {
+    margin-top: 0;
+  }
+
+  .img-container {
+    width: min(100% - 2rem, 25rem);
+    height: 24rem;
+  }
+
+  .img-container img {
+    transform: scale(1);
+  }
+
+  .landing-page p {
+    margin-top: 2em;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .img-container {
     width: min(100% - 2rem, 25rem);
@@ -913,6 +938,12 @@ dialog::backdrop {
   text-align: center;
   place-items: center;
   align-content: center;
+}
+
+@media screen and (max-width: 375px) {
+  .invite {
+    margin-top: 5rem;
+  }
 }
 
 .invite > * {
