@@ -871,7 +871,7 @@ dialog::backdrop {
 .img-container img {
   object-fit: cover;
   object-position: center;
-  transform: scale(1);
+  /* transform: scale(1); */
   object-position: center center;
   height: 100%;
 }
@@ -898,7 +898,7 @@ dialog::backdrop {
   }
 
   .img-container img {
-    transform: scale(1);
+    /* transform: scale(1); */
   }
 }
 
